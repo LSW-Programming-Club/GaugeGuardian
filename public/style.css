@@ -1,9 +1,19 @@
-/* Stylesheet */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
+/* Stylesheet */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 /* header */
@@ -27,4 +37,11 @@ header ul {
 /* main */
 main {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.map {
+    width: 100%;
+    background-color: yellow;
 }

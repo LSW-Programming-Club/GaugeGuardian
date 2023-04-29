@@ -7,8 +7,11 @@ import * as fs from 'fs';
 
 const router = express.Router()
 
-router.get('/:bridgeID', async (req,res) => {
-    db.read(req.params.bridgeID)
+router.get('/bridgeID/:bridgeID', async (req,res) => {
+    console.log(req.params['bridgeID']);
+    await db.read(req.params['bridgeID'], (data) => {
+      res.json(data);
+    })
 })
 
 

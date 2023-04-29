@@ -12,6 +12,10 @@ router.get("/", async function (req, res) {
 //Bridge id info
 router.get("/:id", async function (req, res) {
     await db.read(req.params['id'], (data) => {
+        //Score calculation
+        var score = data.avgStrain * 10;
+        var scoreFixed = score.toFixed(1);
+        data.score = scoreFixed;
         res.render("bridge", {bridge: data});
     })
 })

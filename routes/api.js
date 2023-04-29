@@ -23,6 +23,9 @@ router.get('/getAll', async (req, res) => {
                   id: record.structureNumber,
                   lat: parseInt(record.latitude) / 1000000,
                   lng: parseInt(record.longitude) / 1000000,
+                  yearBuilt: record.yearBuilt,
+                  avgDailyTraffic: record.averageDailyTraffic,
+                  avgSnowfall: record.snowfall
               });
           }
       });

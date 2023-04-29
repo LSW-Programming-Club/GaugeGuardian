@@ -49,7 +49,8 @@
             // Create markers on the map using the received bridge data
             data.forEach(bridge => {
                 const marker = L.marker([bridge.lat, -bridge.lng]).addTo(map);
-                marker.bindPopup(`Bridge Structure ID: ${bridge.id}`);
+                marker.bindPopup(`Bridge Structure ID: ${bridge.id} <br />Year Built: ${bridge.yearBuilt} <br />Avg Daily Traffic: ${bridge.avgDailyTraffic} veh/day <br />Avg Snowfall: ${bridge.avgSnowfall} in/yr <br />
+                    <a href="/${bridge.id}">More info</a>`);
             });
         },
         error: function(xhr, status, error) {

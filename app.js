@@ -13,6 +13,11 @@ app.use(express.static('public'))
 // Flatten icons to /public for device support reasons
 app.use(express.static('public/icons'))
 
+// Enable interpreting POST requests
+import bodyParser from 'body-parser'
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
 // Import routing from other routers in ./routes
 import { router as frontend } from './routes/frontend.js'
 import { router as api } from './routes/api.js'

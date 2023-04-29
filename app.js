@@ -1,8 +1,6 @@
 import express from 'express'
 var app = express();
 
-import sqlite3 from 'sqlite3';
-
 import logger from 'morgan';
 
 app.use(logger('dev'));
@@ -19,6 +17,9 @@ app.use(express.static('public/icons'))
 import { router as frontend } from './routes/frontend.js'
 import { router as api } from './routes/api.js'
 
+import db from './lib/db.js'
+db.init();
+
 app.use("/", frontend);
 app.use("/api", api);
 
@@ -26,32 +27,3 @@ app.use("/api", api);
 app.listen(9090, () => {
     console.log(`server started at http://localhost:9090` );
 });
-
-//db
-var db = new sqlite3.Database('./data.db');
-
-db.serialize(function() {
-    db.run("CREATE TABLE IF NOT EXISTS newData ( \
-      id INTEGER PRIMARY KEY, \
-      bridgeID STRING, \
-      ts DATETIME DEFAULT CURRENT_TIMESTAMP, \
-      strain FLOAT, \
-      avgStrain FLOAT, \
-      motionTraffic INTEGER, \
-      maxStrain FLOAT \
-    )");
-
-    db.run("CREATE TABLE IF NOT EXISTS origData ( \
-        id INTEGER PRIMARY KEY, \
-        bridgeID STRING, \
-        entryYear INTEGER, \
-        yearBuilt INTEGER, \
-        avgTraffic INTEGER, \
-        maxStrain FLOAT, \
-        snowfall FLOAT \
-      )");
-  });
-
-export default {
-    db
-};

@@ -27,7 +27,7 @@ header {
     color: white;
 }
 
-header ul {
+header h3 {
     height: fit-content;
     margin: auto;
     margin-left: 20px;
@@ -38,10 +38,11 @@ header ul {
 main {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .map {
     width: 100%;
-    background-color: yellow;
+    height: 500px;
+    background-color: #f2efe9;
+    border-bottom: 5px solid #65d5f7;
 }

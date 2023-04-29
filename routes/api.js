@@ -9,8 +9,8 @@ const router = express.Router()
 
 
 router.post('/', async (req, res) => {
-  db.add()
-  console.log(req.body)
+    console.log(req.body)
+  db.add(req.body.bridgeID, req.body.strain, req.body.motionTraffic, req.body.maxStrain)
 })
 
 router.get('/getAll', async (req, res) => {

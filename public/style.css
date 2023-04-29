@@ -13,7 +13,7 @@
 main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 /* header */
@@ -27,17 +27,15 @@ header {
     color: white;
 }
 
-header h3 {
+header h1 {
     height: fit-content;
     margin: auto;
-    margin-left: 20px;
     list-style: none;
 }
 
 /* main */
 main {
     width: 100%;
-    display: grid;
 }
 
 .map {
@@ -57,4 +55,11 @@ main {
     backdrop-filter: brightness(0.2);
     color: white;
     font-size: 5em;
+}
+
+#information {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    height: 300px;
 }

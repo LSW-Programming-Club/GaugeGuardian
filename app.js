@@ -41,3 +41,7 @@ db.serialize(function() {
         snowfall FLOAT \
       )");
   });
+
+export default {
+    db
+};

@@ -1,5 +1,6 @@
 import express from 'express'
-import parse from 'csv-parse'
+import {parse} from 'csv-parse'
+import * as fs from 'fs';
 
 var router = express.Router();
 

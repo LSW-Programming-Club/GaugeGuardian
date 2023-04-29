@@ -1,9 +1,10 @@
-const express = require('express');
-const app = express();
+import express from 'express'
+var app = express();
 
-const sqlite3 = require('sqlite3').verbose();
+import sqlite3 from 'sqlite3';
 
-var logger = require('morgan');
+import logger from 'morgan';
+
 app.use(logger('dev'));
 
 // Allows server side rendering
@@ -15,8 +16,8 @@ app.use(express.static('public'))
 app.use(express.static('public/icons'))
 
 // Import routing from other routers in ./routes
-var frontend = require('./routes/frontend');
-var api = require('./routes/api');
+import { router as frontend } from './routes/frontend.js'
+import { router as api } from './routes/api.js'
 
 app.use("/", frontend);
 app.use("/api", api);
@@ -26,20 +27,13 @@ app.listen(9090, () => {
     console.log(`server started at http://localhost:9090` );
 });
 
-app.get("/", function(req, res) {
-    res.send("Hello")
-});
-
-app.post("/data", function (req, res) {
-    console.log(req);
-})
-
 //db
 var db = new sqlite3.Database('./data.db');
 
 db.serialize(function() {
     db.run("CREATE TABLE IF NOT EXISTS newData ( \
-      id STRING PRIMARY KEY, \
+      id INTEGER PRIMARY KEY, \
+      bridgeID STRING, \
       ts DATETIME DEFAULT CURRENT_TIMESTAMP, \
       strain FLOAT, \
       avgStrain FLOAT, \

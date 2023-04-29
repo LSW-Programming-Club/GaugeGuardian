@@ -1,4 +1,5 @@
-var express = require('express');
+import express from 'express'
+
 var router = express.Router();
 
 //Map
@@ -14,4 +15,4 @@ router.get("/:id", function (req, res) {
     res.render("bridge", {data: data})
 })
 
-module.exports = router;
+export { router }

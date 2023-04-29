@@ -7,6 +7,10 @@ import * as fs from 'fs';
 
 const router = express.Router()
 
+router.get('/:bridgeID', async (req,res) => {
+    db.read(req.params.bridgeID)
+})
+
 
 router.post('/', async (req, res) => {
     console.log(req.body)

@@ -28,6 +28,7 @@
     </div>
 </main>
 </body>
+
 <script>
     var map = L.map('map').setView([41.7732004, -99.490343], 7);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -36,5 +37,12 @@
 }).addTo(map);
 
     var marker = L.marker([41.7732004, -99.490343   ]).addTo(map);
+
+    <% bridgeData.forEach(function(bridge) { %>
+            // Add marker for each bridge
+            L.marker([<%= bridge.latitude %>, <%= bridge.longitude %>]).addTo(map)
+                .bindPopup("<b>Bridge ID:</b> <%= bridge.id %>");
+    <% }); %>
+
 </script>
 </html>

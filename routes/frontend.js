@@ -5,16 +5,29 @@ import * as fs from 'fs';
 var router = express.Router();
 
 //Map
-router.get("/", function (req, res) {
-    res.render("index");
+router.get("/", async function (req, res) {
+    //pipe data
+    var bridges = [];
+    var parser = await parse({columns: true}, function (err, records) {
+        records.forEach(function(record) {
+            if(record.longitude != '0') {
+                bridges.push({
+                    id: record.structureNumber,
+                    lat: parseInt(record.latitude) / 1000000,
+                    lng: parseInt(record.longitude) / 1000000,
+                });
+            }
+        });
+    });
+    fs.createReadStream('./nebraska.csv').pipe(parser).on("end", () => {
+        // Send the bridge data to the EJS template
+        res.render("index", { bridgeData: bridges });
+    });
 })
 
 //Bridge id info
-router.get("/:id", function (req, res) {
-    //pipe data
-    //todo blaine
-    var data = null;
-    res.render("bridge", {data: data})
+router.get("/:id", async function (req, res) {
+    res.render("bridge");
 })
 
 export { router }

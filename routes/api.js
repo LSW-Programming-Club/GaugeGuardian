@@ -16,9 +16,11 @@ router.post('/', async (req, res) => {
 router.get('/getAll', async (req, res) => {
   //pipe data
   var bridges = [];
+  var bridgeIds = {}; // Object to keep track of added bridge IDs
   var parser = await parse({columns: true}, function (err, records) {
       records.forEach(function(record) {
-          if(record.longitude != '0' && bridges.length < 200) {
+          if(record.longitude != '0' && bridges.length < 200 && !bridgeIds[record.structureNumber]) {
+              bridgeIds[record.structureNumber] = true; // Mark the ID as added
               bridges.push({
                   id: record.structureNumber,
                   lat: parseInt(record.latitude) / 1000000,

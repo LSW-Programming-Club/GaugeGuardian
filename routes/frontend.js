@@ -3,7 +3,7 @@ var router = express.Router();
 
 //Map
 router.get("/", function (req, res) {
-    res.render("map");
+    res.render("index");
 })
 
 //Bridge id info

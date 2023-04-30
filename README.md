@@ -4,6 +4,8 @@
 
 ## Description
 
+### [Presentation](/Gauge_Guardian.pdf)
+
 Gauge Guardian is a revolutionary solution that will transform the way Nebraska approaches infrastructure spending. With Gauge Guardian, every bridge in the state will be equipped with sensors that constantly monitor and measure its deformation. This data is then transmitted to a centralized system, which can analyze the information using previously collected bridge information and identify potential issues before they become major problems. By detecting issues early, Gauge Guardian will helped Nebraska save money on infrastructure spending by avoiding costly repairs or even bridge replacements. With this innovative solution, Nebraska will be able to prioritize its infrastructure spending in a more efficient and cost-effective manner, ensuring that our bridges remain safe and functional for years to come.
 
 ## Powered By

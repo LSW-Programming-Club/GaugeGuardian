@@ -8,14 +8,14 @@ Gauge Guardian is a revolutionary solution that will transform the way Nebraska 
 
 ## Powered By
 
- ‎ ‎ ‎ ‎ ‎ ‎[**Node.js**](https://github.com/nodejs/node) is the runtime used for this project. It was fast and easy to setup quickly for the limited time we had </br>
+- [**Node.js**](https://github.com/nodejs/node) is the runtime used for this project. It was fast and easy to setup quickly for the limited time we had
 
- ‎ ‎ ‎ ‎ ‎ ‎[**Javascript**](https://github.com/topics/javascript) - We used javascript because although Typescript is nicer but it is a lot harder to setup a quick development environemt. </br>
+- [**Javascript**](https://github.com/topics/javascript) - We used javascript because although Typescript is nicer but it is a lot harder to setup a quick development environemt.
 
- ‎ ‎ ‎ ‎ ‎ ‎[**Express.js**](https://github.com/expressjs/express) - used as the minimalist web framework to display the web page. It gave me low enough capabilities without going too low that it was hard to develop with. </br>
+- [**Express.js**](https://github.com/expressjs/express) - used as the minimalist web framework to display the web page. It gave me low enough capabilities without going too low that it was hard to develop with.
 
 ## Contributors
 
- ‎ ‎ ‎ ‎ ‎ ‎<img src="https://avatars.githubusercontent.com/u/72430668" height="20"> [**G2-Games**](https://github.com/G2-Games) - Frontend Designer </br>
- ‎ ‎ ‎ ‎ ‎ ‎<img src="https://avatars.githubusercontent.com/u/54963771" height="20"> [**Curtain**](https://github.com/curtainman) - Frontend Dev </br>
- ‎ ‎ ‎ ‎ ‎ ‎<img src="https://avatars.githubusercontent.com/u/108963625" height="20"> [**blaine-t**](https://github.com/blaine-t) - Backend Dev
+- <img src="https://avatars.githubusercontent.com/u/72430668" height="20"> [**G2-Games**](https://github.com/G2-Games) - Frontend Designer
+- <img src="https://avatars.githubusercontent.com/u/54963771" height="20"> [**Curtain**](https://github.com/curtainman) - Frontend Dev
+- <img src="https://avatars.githubusercontent.com/u/108963625" height="20"> [**blaine-t**](https://github.com/blaine-t) - Backend Dev
